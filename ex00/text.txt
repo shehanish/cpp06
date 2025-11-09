@@ -1,0 +1,24 @@
+Valid inputs that might be tricky:
+──────────────────────────────────
+"0"       → int zero
+"0.0"     → double zero
+"0.0f"    → float zero
+'0'       → char '0' (ASCII 48)
+"inf"     → double infinity
+"inff"    → float infinity
+"-42.0f"  → negative float
+"+42"     → positive int (with explicit +)
+"42."     → might be invalid (no digits after .)
+".42"     → might be invalid (no digits before .)
+
+
+Input	Char		Int			 Float	Double
+nan		impossible	impossible	 nanf	nan
+nanf	impossible	impossible	 nanf	nan
++inf	impossible	impossible	+inff	+inf
+-inf	impossible	impossible	-inff	-inf
+inf		impossible	impossible	+inff	+inf
+
++inff	impossible	impossible	+inff	+inf
+-inff	impossible	impossible	-inff	-inf
+inff	impossible	impossible	+inff	+inf
