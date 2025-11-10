@@ -22,3 +22,7 @@ inf		impossible	impossible	+inff	+inf
 +inff	impossible	impossible	+inff	+inf
 -inff	impossible	impossible	-inff	-inf
 inff	impossible	impossible	+inff	+inf
+
+- non dislayable handle
+- impossible handle 
+- (-) values

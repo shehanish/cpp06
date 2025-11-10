@@ -6,7 +6,7 @@
 /*   By: shkaruna <shkaruna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 14:25:40 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/11/09 19:58:25 by shkaruna         ###   ########.fr       */
+/*   Updated: 2025/11/10 17:13:09 by shkaruna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 #include <iostream>
 #include <cctype>
-#include <algorithm>
+#include <cstdlib>
 
 class ScalarConverter
 {
@@ -33,9 +33,12 @@ class ScalarConverter
 		static void	isDoubleLiteral(const std::string& input);
 		static void	isSpecialLiteral(const std::string& input); //Result of a undefined mathamatical operation
 			
-	public:
-		static void		convert(const std::string& input);
+		static bool	detectInt(const std::string& input);
+		static bool detectFloat(const std::string& input);
+		static bool detectDouble(const std::string& input);
+	
+public:
+	static void		convert(const std::string& input);
+};
 
 #endif
-
-};
