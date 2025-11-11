@@ -6,7 +6,7 @@
 /*   By: shkaruna <shkaruna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 11:15:46 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/11/11 18:16:50 by shkaruna         ###   ########.fr       */
+/*   Updated: 2025/11/11 18:17:56 by shkaruna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int		main(int argc, char **argv)
 	std::cout << "Pointer: " << original << std::endl;
 	std::cout << "Original Value:  " << original->value << std::endl; 
 	
-	uintptr_t raw_byte = Serialization::serialize(original);
+	uintptr_t raw_byte = Serializer::serialize(original);
 	std::cout << "serialized: " << raw_byte << std::endl;
 	
-	Data* Deserialized = Serialization::deserialize(raw_byte);
+	Data* Deserialized = Serializer::deserialize(raw_byte);
 	std::cout << "Restored: " << Deserialized << std::endl;
 	std::cout << "Restored Value: " << Deserialized->value << std::endl;
 	
